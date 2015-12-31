@@ -5,23 +5,25 @@ public class Dog {
 	private String breed;
 	private int age;
 	private int weight;
+	private double tail;
 	
 	public Dog(String dName, String dBreed, int dAge, int dWeight){
 		name = dName;
 		breed = dBreed;
 		age = dAge;
 		weight = dWeight;
+		setTail();
 	}
 	
-	public double getTail(){
-		double tail = 0;
+	private void setTail(){
 		if (breed.equalsIgnoreCase("Tax")){
 			 tail = 3.7;
 		}
 		else{			
 			tail = age*weight/10;
 		}
-		
+	}
+	public double getTail(){
 		return tail;
 	}
 	public String getName(){
